@@ -220,3 +220,20 @@ void main()
             printf("%c : %d\n", i, freq[i]);
     }
 }
+
+#include <stdio.h>
+void main() 
+{
+    char str1[100], str2[100], combined[200];
+    int i, j;
+    printf("Enter first string: ");
+    scanf("%[^\n]s",str1);
+    printf("Enter second string: ");
+    scanf("%[^\n]s",str2);
+    for (i = 0; str1[i] != '\0'; i++)
+        combined[i] = str1[i];
+    for (j = 0; str2[j] != '\0'; j++, i++)
+        combined[i] = str2[j];
+    combined[i] = '\0';
+    printf("Combined string: %s\n", combined);
+}
