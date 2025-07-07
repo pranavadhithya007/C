@@ -116,3 +116,27 @@ void main()
     printf("Total Vowels: %d\n",v);
     printf("Total Consonants: %d\n",c);
 }
+
+#include <stdio.h>
+#include <string.h>
+void main() 
+{
+    char str[100];
+    int i, maxCount = 0, freq[256] = {0};
+    char maxChar;
+    printf("Enter a string: ");
+    scanf("%[^\n]s",str);
+    for (i = 0; str[i] != '\0'; i++)
+    {
+        freq[(unsigned char)str[i]]++;
+    }
+    for (i = 0; str[i] != '\0'; i++) 
+    {
+        if (freq[(unsigned char)str[i]] > maxCount)
+        {
+            maxCount = freq[(unsigned char)str[i]];
+            maxChar = str[i];
+        }
+    }
+    printf("Maximum occurring character: %c (appears %d times)\n", maxChar, maxCount);
+}
