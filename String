@@ -290,3 +290,27 @@ void main() {
 
     printf("Modified string: %s\n", str);
 }
+
+#include <stdio.h>
+#include <string.h>
+
+void main() {
+    char str[100], word[50];
+    int i = 0, j;
+
+    printf("Enter a string: ");
+    scanf("%[^\n]s",str);
+
+    strcat(str, " ");
+
+    printf("Words:\n");
+    for (j = 0; str[j] != '\0'; j++) {
+        if (str[j] != ' ') {
+            word[i++] = str[j];
+        } else {
+            word[i] = '\0';
+            printf("%s\n", word);
+            i = 0;
+        }
+    }
+}
