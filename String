@@ -237,3 +237,36 @@ void main()
     combined[i] = '\0';
     printf("Combined string: %s\n", combined);
 }
+
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+    char str[200], word[50], maxWord[50], minWord[50];
+    int i = 0, j, minLen = 100, maxLen = 0, len;
+
+    printf("Enter a string: ");
+    scanf("%[^\n]s",str);
+    strcat(str, " "); 
+
+    for (j = 0; str[j] != '\0'; j++) {
+        if (str[j] != ' ') {
+            word[i++] = str[j];
+        } else {
+            word[i] = '\0';
+            len = strlen(word);
+            if (len > maxLen) {
+                maxLen = len;
+                strcpy(maxWord, word);
+            }
+            if (len < minLen) {
+                minLen = len;
+                strcpy(minWord, word);
+            }
+            i = 0;
+        }
+    }
+
+    printf("Smallest word: %s\n", minWord);
+    printf("Largest word: %s\n", maxWord);
+}
