@@ -270,3 +270,23 @@ void main()
     printf("Smallest word: %s\n", minWord);
     printf("Largest word: %s\n", maxWord);
 }
+
+#include <stdio.h>
+
+void main() {
+    char str[100], ch;
+    int i;
+
+    printf("Enter a string: ");
+    scanf("%[^\n]s",str);
+    
+    printf("Enter the character to replace spaces: ");
+    scanf("%c", &ch);
+
+    for (i = 0; str[i] != '\0'; i++) {
+        if (str[i] == ' ')
+            str[i] = ch;
+    }
+
+    printf("Modified string: %s\n", str);
+}
