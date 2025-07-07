@@ -120,3 +120,22 @@ int main()
     }
     return 0;
 }
+
+#include <stdio.h>
+int main() 
+{
+    int size = 4;
+    int blackCells = 0;
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++) 
+        {
+            if ((i + j) % 2 == 0)
+            {
+                blackCells++;
+            }
+        }
+    }
+    printf("Number of black cells on a 4x4 chessboard: %d\n", blackCells);
+    return 0;
+}
