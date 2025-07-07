@@ -89,3 +89,30 @@ void main()
     printf("Total Digits: %d\n",d);
     printf("Total Special Characters: %d\n",g);
 }
+
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+    char s[100],ch;
+    int i,v=0,c=0;
+    printf("Enter a string: ");
+    scanf("%s",s);
+    for(i=0;s[i]!='\0';i++) 
+    {
+        ch=s[i];
+        if (ch>='A'&&ch<='Z') 
+        {
+            ch+= 32;
+        }
+        if(ch >= 'a' && ch <= 'z') 
+        {
+            if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+                v++;
+            else
+                c++;
+        }
+    }
+    printf("Total Vowels: %d\n",v);
+    printf("Total Consonants: %d\n",c);
+}
