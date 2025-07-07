@@ -43,3 +43,27 @@ void main()
     }
     printf("Total number of words: %d\n", count);
 }
+
+#include<stdio.h>
+#include<string.h>
+void main() 
+{
+    char s[100],t[100];
+    int i,f=1;
+    printf("Enter first string: ");
+    scanf("%s",s);
+    printf("Enter second string: ");
+    scanf("%s",t);
+    for(i=0;s[i]!='\0'||t[i]!='\0';i++)
+    {
+        if(s[i]!=t[i])
+        {
+            f=0;
+            break;
+        }
+    }
+    if(f)
+        printf("Strings are equal.\n");
+    else
+        printf("Strings are different.\n");
+}
