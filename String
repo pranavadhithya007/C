@@ -11,3 +11,20 @@ void main()
         printf("%c\n",str[i]);
     }
 }
+
+#include<stdio.h>
+#include<string.h>
+void main() 
+{
+    char str[100];
+    int i;
+    printf("Enter a string: ");
+    scanf("%s",str);
+    int len =strlen(str);
+    
+    printf("reverse\n");
+    for(i=len-1;str[i]!='\0';i--)
+    {
+        printf("%c\n",str[i]);
+    }
+}
