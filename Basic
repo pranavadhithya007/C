@@ -12,3 +12,22 @@ void main()
         printf("Maximum number is B");
     }
 }
+
+#include <stdio.h>
+void main()
+{
+    int a; 
+    scanf("%d",&a);
+    if (a>0)
+    {
+        printf("It is Positive");
+    }
+    else if (a==0)
+    {
+        printf("It is Zero");
+    }
+    else
+    {
+        printf("It is Negative");
+    }
+}
