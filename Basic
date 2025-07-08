@@ -31,3 +31,18 @@ void main()
         printf("It is Negative");
     }
 }
+
+#include <stdio.h>
+void main()
+{
+    int n;
+    scanf("%d",&n);
+    if(n%2)
+    {
+        printf("It's Odd number");
+    }
+    else
+    {
+        printf("It's Even number");
+    }
+}
