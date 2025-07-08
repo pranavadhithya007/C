@@ -46,3 +46,18 @@ void main()
         printf("It's Even number");
     }
 }
+
+#include <stdio.h>
+void main()
+{
+    int y; 
+    scanf("%d",&y);
+    if((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0))
+    {
+        printf("It's Leap year");
+    }
+    else
+    {
+        printf("It's not Leap year");
+    }
+}
