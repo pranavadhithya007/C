@@ -146,3 +146,18 @@ void main()
         }
     }
 }
+
+#include<stdio.h>//level 0 sum 1
+void main()
+{
+    int a,b;
+    scanf("%d%d",&a,&b);
+    if(a<b)
+    {
+        printf("Smallest number is A");
+    }
+    else
+    {
+        printf("Smallest number is B");
+    }
+}
