@@ -117,3 +117,32 @@ int main()
 
     }
 }
+
+. #include<stdio.h>
+void main()
+{
+    int a,b,c; 
+    scanf("%d%d%d",&a,&b,&c);
+    if(a>=b)
+    {
+        if(a>=c)
+        {
+            printf("Maximum number is A");
+        }
+        else
+        {
+            printf("Maximum number is C");
+        }
+    }
+    else
+    {
+        if(b>=c)
+        {
+            printf("Maximum number is B");
+        }
+        else
+        {
+            printf("Maximum number is C");
+        }
+    }
+}
